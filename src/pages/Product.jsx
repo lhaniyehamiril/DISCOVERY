@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 
-import us from '../assets/earth.webp'
+import us from '../assets/us.webp'
 
 import { Box } from '../ui/Box'
 import { Heading } from '../ui/Heading'
