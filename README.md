@@ -2,9 +2,6 @@
 
 A little app for travelers to write down their trip stories. It’s a single-page frontend demo built to show off my React skills!
 
-# Demo DISCOVERY📷
-[DISCOVERY](https://demo-discovery.netlify.app)
-
 ## ✨ What’s Inside
 - Jot down travel notes in a smooth, single-page layout.
 - Easy navigation with React Router.
