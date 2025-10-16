@@ -1,3 +1,132 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "https://unpkg.com/leaflet@1.9.3/dist/leaflet.css";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
+
+
+@font-face {
+  font-family: "star";
+  src: url("./font/Algance-Regular.otf");
+}
+@font-face {
+  font-family: "nunito";
+  src: url("./font/Nunito-ExtraBold.ttf");
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+:root {
+  --green: #8aff66;
+  --black: #111;
+  --blue: #6d8bb9;
+}
+
+
+::selection {
+  color: var(--green);
+  background: var(--black);
+}
+
+
+body {
+  background: var(--black);
+  font-family: nunito;
+  overflow: hidden;
+}
+
+
+button {
+  user-select: none;
+}
+
+
+#box-pricing {
+  background-image: url(./assets/bg-price.webp);
+  background-size: cover;
+}
+
+
+
+/* map */
+
+.leaflet-popup-content-wrapper {
+  background: var(--black);
+  color: var(--green);
+  font-family: nunito;
+  font-size: 11px;
+}
+.leaflet-popup-tip {
+  background: var(--black);
+}
+
+.leaflet-popup-close-button span {
+  display: none;
+}
+
+:is(.leaflet-control-zoom-out .leaflet-control-zoom-in, span) {
+  font-family: nunito;
+}
+
+.leaflet-control-container .leaflet-control-attribution {
+  font-size: 5px;
+}
+
+
+/* react datepicker  */
+
+.react-datepicker-popper .react-datepicker {
+  border-radius: 1rem;
+}
+.react-datepicker__input-container input {
+  border-radius: 2rem;
+  width: 16rem;
+  background: var(--black);
+  color: var(--green);
+  height: 42px;
+  padding-left: 1rem;
+  font-size: 13px;
+}
+
+.react-datepicker__month-container {
+  z-index: 2;
+}
+
+.react-datepicker__input-container input:focus {
+  outline: none;
+}
+
+.react-datepicker__input-container input::placeholder {
+  color: var(--green);
+  font-family: nunito;
+  font-size: 14px;
+}
+
+.react-datepicker-popper .react-datepicker {
+  border: none;
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.react-datepicker__month-container .react-datepicker__header,
+.react-datepicker__month-container {
+  font-family: nunito;
+}
+
+.container-scroll-box-app {
+  overflow-y: scroll;
+  height: 253px;
+}

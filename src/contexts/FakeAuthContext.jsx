@@ -1,10 +1,12 @@
 import { createContext, useContext, useReducer } from "react";
 
 const AuthContext = createContext();
+
 const initialState = {
     user: null,
     isAuthenticated: false
 }
+
 const reducer = (state, action) => {
     switch (action.type) {
         case 'login':

@@ -8,9 +8,9 @@ import { useForm } from "../../contexts/FormContext";
 import { useAppNavigate } from "../../hooks/useAppNavigate";
 import { useUrlPosition } from "../../hooks/useUrlPosition";
 
-import { Message } from "../../ui/Message";
-import { Loader } from "../../ui/Loader";
-import { Button, LinkButton } from "../../ui/Button";
+import { Message } from "../../components/Message";
+import { Loader } from "../../components/Loader";
+import { Button, LinkButton } from "../../components/Button";
 import { generateId } from "../../utils/helpers";
 
 

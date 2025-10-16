@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useCities } from "../../contexts/CitiesContext";
 import { CityItem } from "./CityItem"
-import { Message } from "../../ui/Message";
+import { Message } from "../../components/Message";
 
 const Scroll = styled.div`
   overflow-y: scroll;

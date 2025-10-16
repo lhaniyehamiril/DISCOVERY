@@ -1,7 +1,7 @@
 import { useCities } from "../../contexts/CitiesContext";
 
 import { CountriesItem } from "./CountriesItem";
-import { Message } from "../../ui/Message";
+import { Message } from "../../components/Message";
 
 
 export const CountriesList = () => {

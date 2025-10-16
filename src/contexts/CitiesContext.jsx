@@ -1,15 +1,10 @@
 import { createContext, useContext } from "react";
 import { useState } from "react"
 
-const DataCities = []
-
-
-
 const CitiesContext = createContext()
 
-
 const CitiesProvider = ({ children }) => {
-    const [cities, setCities] = useState(DataCities);
+    const [cities, setCities] = useState([]);
     return (
         <CitiesContext.Provider value={{
             cities,

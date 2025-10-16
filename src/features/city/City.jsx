@@ -4,7 +4,7 @@ import { TbCircleArrowLeftFilled } from "react-icons/tb";
 
 import { useCities } from "../../contexts/CitiesContext";
 import { formatData } from "../../utils/helpers";
-import { LinkButton } from "../../ui/Button";
+import { LinkButton } from "../../components/Button";
 import styled from "styled-components";
 
 const Scroll = styled.p`

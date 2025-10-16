@@ -3,13 +3,17 @@ import { useEffect, useState } from "react"
 import { useUrlPosition } from "../hooks/useUrlPosition"
 import { useAppNavigate } from "../hooks/useAppNavigate"
 import { useCities } from '../contexts/CitiesContext'
+
+
 export const Map = () => {
     const [mapPosition, setMapPosition] = useState([40, 0])
     const { cities } = useCities()
     const [mapLat, mapLng] = useUrlPosition();
+
     useEffect(() => {
         if (mapLat && mapLng) setMapPosition([mapLat, mapLng])
     }, [mapLat, mapLng])
+
     return (
         <MapContainer center={mapPosition} zoom={5} scrollWheelZoom={true} className="w-[76%] h-[160px] iphoneFourteen:h-[160px] phone:w-[330px] sm:w-[45%] lg:w-[60%] sm:h-[370px] lg:h-[400px] rounded-2xl">
             <TileLayer

@@ -1,10 +1,11 @@
 import { Navigate } from "react-router-dom"
 
 
-import { AppLayout } from "./pages/AppLayout"
+import { AppLayout } from "./layouts/AppLayout"
+import {PublicLayout} from "./layouts/PublicLayout"
 import { Home } from "./pages/Home"
 import { Login } from "./pages/Login"
-import { PageNotFound } from "./pages/PageNotFound"
+import { NotFound } from "./pages/NotFound"
 import { Pricing } from "./pages/Pricing"
 import { Product } from "./pages/Product"
 import { ProtectedRoute } from "./pages/ProtectedRoute"
@@ -18,22 +19,16 @@ import { FormProvider } from "./contexts/FormContext"
 
 
  const router = [
-    { 
-       path: '/',
-      element: <Home />
-     } ,
-    { 
-      path:'login' ,
-      element: <Login />
-     } ,
-    { 
-      path:'product' ,
-      element: <Product />
-     } ,
-    { 
-      path:'pricing' ,
-      element: <Pricing />
-     } ,
+  {
+    element: <PublicLayout /> ,
+    children : [
+       { path: '/', element: <Home />},
+       { path:'login', element: <Login />},
+       { path:'product', element: <Product />},
+       { path:'pricing', element: <Pricing />},
+     ]
+    }
+     ,
     { 
       path:'app' ,
       element: ( 
@@ -58,7 +53,7 @@ import { FormProvider } from "./contexts/FormContext"
       },
      {
         path: '*',
-        element: <PageNotFound />
+        element: <NotFound />
      }
 ]
 

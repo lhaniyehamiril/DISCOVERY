@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom"
-import "./App.css"
+import "./index.css"
 import { CitiesProvider } from "./contexts/CitiesContext"
 import { AuthProvider } from "./contexts/FakeAuthContext"
 import router from "./router" // ✅ default import
-import CustomToaster from "./ui/CustomToaster"
+import CustomToaster from "./components/CustomToaster"
+
 
 const App = () => {
   const renderRoutes = (routes) => {
@@ -21,14 +22,15 @@ const App = () => {
 
 
   return (
-    <>
+    <div>
+     
       <AuthProvider>
         <CitiesProvider>
             <Routes>{renderRoutes(router)}</Routes>
         </CitiesProvider>
       </AuthProvider>
       <CustomToaster />
-    </>
+    </div>
   )
 }
 
