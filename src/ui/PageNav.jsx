@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 export const PageNav = () => {
-
+   
     return (
         <>
             <nav className="flex items-center mt-[3.5rem] justify-center">

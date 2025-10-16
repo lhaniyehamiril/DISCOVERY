@@ -17,10 +17,9 @@ import { CountriesList } from "./features/country/CountriesList"
 import { FormProvider } from "./contexts/FormContext"
 
 
-export const router = [
+ const router = [
     { 
-      path:'/' ,
-      index: true, 
+       path: '/',
       element: <Home />
      } ,
     { 
@@ -62,3 +61,5 @@ export const router = [
         element: <PageNotFound />
      }
 ]
+
+export default router

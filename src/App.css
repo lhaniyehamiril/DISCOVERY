@@ -29,9 +29,11 @@
   color: var(--green);
   background: var(--black);
 }
+
 button {
   user-select: none;
 }
+
 body {
   background: var(--black);
   font-family: nunito;
@@ -42,12 +44,6 @@ body {
   font-family: star;
 }
 
-nav ul li .login {
-  padding: 8px 1.3rem 8px 1.3rem;
-  background: var(--green);
-  border-radius: 3rem;
-  color: var(--black);
-}
 
 .loading {
   width: 50px;
@@ -183,13 +179,6 @@ nav ul li .login {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
   }
-}
-
-nav li .active {
-  background: var(--green);
-  color: var(--black);
-  border-radius: 2rem;
-  padding: 7px 1rem 7px 1rem;
 }
 
 #massage {
