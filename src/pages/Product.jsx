@@ -6,11 +6,10 @@ import { Box } from '../ui/Box'
 import { Heading } from '../ui/Heading'
 
 const imgVariants = {
-    hidden: { opacity: 0, scaleX: 1.5 },
+    hidden: { opacity: 0 , x:-5},
     visible: {
         opacity: 1,
-        scaleX: 1,
-        transition: { type: 'spring', duration: 1, stiffness: 160 }
+        x:0
     }
 }
 export const Product = () => {
@@ -21,7 +20,6 @@ export const Product = () => {
                     variants={imgVariants}
                     initial='hidden'
                     animate='visible'
-                    transition={{}}
                 />
                 <div id='content-product' className='flex flex-col gap-3 text-center'>
                     <Heading className='text-xl pt-2 text-[#171c37]'>DISCOVERY </Heading>
