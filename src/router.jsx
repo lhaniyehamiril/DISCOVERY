@@ -1,6 +1,5 @@
 import { Navigate } from "react-router-dom"
 
-
 import { AppLayout } from "./layouts/AppLayout"
 import {PublicLayout} from "./layouts/PublicLayout"
 import { Home } from "./pages/Home"

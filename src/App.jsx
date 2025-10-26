@@ -1,33 +1,21 @@
-import { Route, Routes } from "react-router-dom"
+import { useRoutes } from "react-router-dom"
 import "./index.css"
 import { CitiesProvider } from "./contexts/CitiesContext"
 import { AuthProvider } from "./contexts/FakeAuthContext"
-import router from "./router" // ✅ default import
+import router from "./router" 
 import CustomToaster from "./components/CustomToaster"
 
 
 const App = () => {
-  const renderRoutes = (routes) => {
-    return routes?.map((route, i) => (
-      <Route
-        key={i}
-        index={route.index}
-        path={route.path}
-        element={route.element}
-      >
-        {route.children && renderRoutes(route.children)}
-      </Route>
-    ))
-  }
-
-
+  const element = useRoutes(router)
   return (
     <div>
-     
       <AuthProvider>
+
         <CitiesProvider>
-            <Routes>{renderRoutes(router)}</Routes>
+            {element}
         </CitiesProvider>
+
       </AuthProvider>
       <CustomToaster />
     </div>
